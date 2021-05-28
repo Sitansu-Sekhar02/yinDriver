@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="app.imcrinox.com.shoutoutloud.MainActivity">
+    <group
+        android:id="@+id/group_address_menu"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_add_new"
+            android:icon="@drawable/ic_address"
+            android:orderInCategory="100"
+            android:title="@string/add_new"
+            app:showAsAction="always" />
+    </group>
+
+</menu>

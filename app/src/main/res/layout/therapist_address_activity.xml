@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/marker_view_incl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_map_bg"
+    tools:context=".map.SearchPlaceOnMapActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_confirm"
+        android:layout_below="@+id/header_ll">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.yin.driver.map.CustomMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/marker_icon_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_location" />
+    </FrameLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/googleplacesearch_icon_cv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_gutter_margin"
+        android:layout_marginTop="@dimen/activity_gutter_margin_double"
+        android:layout_marginRight="@dimen/activity_gutter_margin"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false">
+
+        <AutoCompleteTextView
+            android:id="@+id/googleplacesearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_bar"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_back"
+            android:drawableRight="@drawable/com_facebook_close"
+            android:drawablePadding="7dp"
+            android:hint="Search for a location"
+            android:lines="3"
+            android:maxLines="5"
+            android:minLines="3"
+            android:padding="3dp"
+            android:textSize="14sp"></AutoCompleteTextView>
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/header_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:padding="@dimen/activity_gutter_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/therapist_profile_round_view"
+                    android:layout_width="@dimen/navigation_header_image_size"
+                    android:layout_height="@dimen/navigation_header_image_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_profile_pic"
+                    android:visibility="visible"
+                    app:civ_border_color="@color/profile_image_border"
+                    app:civ_border_width="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navigation_header_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <com.yin.driver.view.AppTextView
+                    android:id="@+id/therapist_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amanda"
+                    android:textAppearance="@style/LargeText"
+                    android:textColor="@color/ColorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <com.yin.driver.view.AppTextView
+                    android:id="@+id/therapist_id_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/navigation_header_name"
+                    android:layout_marginTop="@dimen/activity_gutter_margin_quarter"
+                    android:text="ID:7856664"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/ColorPrimaryDark"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <com.yin.driver.view.AppTextView
+                    android:id="@+id/therapist_service_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/navigation_header_name"
+                    android:layout_marginTop="@dimen/activity_gutter_margin_quarter"
+                    android:text="Dolly Kiran"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/ColorPrimaryDark"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:paddingRight="-50dp"
+                android:src="@color/transparent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_gutter_margin_double"
+            android:paddingTop="@dimen/activity_gutter_margin"
+            android:paddingRight="@dimen/activity_gutter_margin"
+            android:paddingBottom="@dimen/activity_gutter_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/customer_profile_round_view"
+                    android:layout_width="@dimen/navigation_header_image_size_large"
+                    android:layout_height="@dimen/navigation_header_image_size_large"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_customer_bg"
+                    android:visibility="visible"
+                    app:civ_border_color="@color/profile_image_border"
+                    app:civ_border_width="2dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customer_header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="0dp">
+
+                <com.yin.driver.view.AppTextView
+                    android:id="@+id/customer_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amanda"
+                    android:textAppearance="@style/LargeText"
+                    android:textColor="@color/ColorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <com.yin.driver.view.AppTextView
+                    android:id="@+id/customer_id_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/navigation_header_name"
+                    android:text="ID:785666454785"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/ColorPrimaryDark"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_gutter_margin_half"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/activity_gutter_margin_half"
+                        android:src="@drawable/ic_location_blue" />
+
+
+                    <com.yin.driver.view.AppTextView
+                        android:id="@+id/customer_address_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/navigation_header_name"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                        android:layout_marginTop="@dimen/activity_gutter_margin_quarter"
+                        android:text="Riyad, Soudi Arabia 122345"
+                        android:textAppearance="@style/SmallText"
+                        android:textColor="@color/ColorPrimaryDark"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/navigation_header_close_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:paddingRight="-50dp"
+                android:src="@color/transparent"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.yin.driver.view.AppButton
+        android:id="@+id/bt_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/ColorPrimary"
+        android:gravity="center"
+        android:text="@string/go_to_home"
+        android:textAllCaps="true"
+        android:textAppearance="@style/LargeText"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="normal" />
+</RelativeLayout>

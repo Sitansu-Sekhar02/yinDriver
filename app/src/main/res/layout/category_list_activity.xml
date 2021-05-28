@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_common">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <com.yin.driver.view.AppTextView_Title
+        android:id="@+id/title_tv"
+        android:layout_below="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/activity_gutter_margin_half"
+        android:gravity="center"
+        android:singleLine="true"
+        android:background="@color/ColorPrimary"
+        android:text="@string/select_services"
+        android:textAllCaps="true"
+        android:textAppearance="@style/LargeText"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_tv"
+        android:layout_above="@+id/register_btn">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical">
+
+
+        <com.vlonjatg.progressactivity.ProgressRelativeLayout
+            android:id="@+id/details_progressActivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            progressActivity:emptyBackgroundColor="@color/emptyBackgroundColor"
+            progressActivity:emptyContentTextColor="@color/emptyContentTextColor"
+            progressActivity:emptyContentTextSize="@dimen/emptyContentTextSize"
+            progressActivity:emptyImageHeight="@dimen/emptyImageHeight"
+            progressActivity:emptyImageWidth="@dimen/emptyImageWidth"
+            progressActivity:emptyTitleTextColor="@color/emptyTitleTextColor"
+            progressActivity:emptyTitleTextSize="@dimen/emptyTitleTextSize"
+            progressActivity:errorBackgroundColor="@color/errorBackgroundColor"
+            progressActivity:errorContentTextColor="@color/errorContentTextColor"
+            progressActivity:errorContentTextSize="@dimen/errorContentTextSize"
+            progressActivity:errorImageHeight="@dimen/errorImageHeight"
+            progressActivity:errorImageWidth="@dimen/errorImageWidth"
+            progressActivity:errorTitleTextColor="@color/errorTitleTextColor"
+            progressActivity:errorTitleTextSize="@dimen/errorTitleTextSize"
+            progressActivity:loadingBackgroundColor="@color/loadingBackgroundColor"
+            progressActivity:loadingProgressBarColor="@color/loadingProgressBarColor"
+            progressActivity:loadingProgressBarHeight="@dimen/loadingProgressBarHeight"
+            progressActivity:loadingProgressBarWidth="@dimen/loadingProgressBarWidth">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/category_list_activity_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/register_btn"
+                android:background="@color/ColorCommonBg" />
+
+            <com.zl.reik.dilatingdotsprogressbar.DilatingDotsProgressBar
+                android:id="@+id/extraProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:color="@color/extraLoaderColor"
+                android:radius="5dp"
+                android:visibility="gone"
+                app:dd_animationDuration="500"
+                app:dd_horizontalSpacing="4dp"
+                app:dd_numDots="@integer/extraLoaderNumDOTS"
+                app:dd_scaleMultiplier="1.5" />
+        </com.vlonjatg.progressactivity.ProgressRelativeLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <com.yin.driver.view.AppTextView_Title
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@color/ColorPrimary"
+        android:gravity="center"
+        android:padding="@dimen/activity_gutter_margin_half"
+        android:singleLine="true"
+        android:text="@string/register"
+        android:textAllCaps="true"
+        android:textAppearance="@style/LargeText"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
+
+
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_account_menu"
+            android:title="@string/account"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/ic_support_menu"
+            android:title="@string/support"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout_menu"
+            android:title="@string/logout"
+            app:showAsAction="always" />
+
+
+
+     <!--   <item
+            android:id="@+id/nav_language"
+            android:icon="@drawable/ic_language_menu"
+            android:title="@string/nav_language"
+            app:actionLayout="@layout/language"
+            app:showAsAction="always" />-->
+
+       <!-- <item
+            android:id="@+id/nav_appointments"
+            android:icon="@drawable/ic_appointments_menu"
+            android:title="@string/appointment"
+            app:showAsAction="always" />-->
+
+        <!--  <item
+              android:id="@+id/nav_payments"
+              android:icon="@drawable/ic_payments_menu"
+              app:showAsAction="always"
+              android:title="@string/payments" />-->
+
+        <!--<item
+            android:id="@+id/nav_address"
+            app:showAsAction="always"
+            android:icon="@drawable/ic_addresses_menu"
+            android:title="@string/addresses" />-->
+
+
+
+        <!--  <item
+              android:id="@+id/nav_support"
+              android:icon="@drawable/ic_support_menu"
+              app:showAsAction="always"
+              android:title="@string/support" />-->
+        <!-- <item
+             android:id="@+id/nav_about_yin"
+             android:icon="@drawable/ic_about_yin_menu"
+             app:showAsAction="always"
+             android:title="@string/about_yin" />-->
+
+        <!--  <item
+              android:id="@+id/nav_customer_service"
+              android:icon="@drawable/ic_customer_service_menu"
+              app:showAsAction="always"
+              android:title="@string/customer_service" />-->
+
+    </group>
+
+</menu>
+
+

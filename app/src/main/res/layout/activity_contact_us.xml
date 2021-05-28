@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_common">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar_profile" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:scrollbars="none"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <com.yin.driver.view.AppTextView_Title
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/contact_us"
+                android:textAllCaps="true"
+                android:textAppearance="@style/LargeText"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_support_icon" />
+
+            <com.yin.driver.view.AppTextView_Title
+                android:id="@+id/activity_contact_us_support_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/service_btn_bg"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/support"
+                android:textAllCaps="false"
+                android:textAppearance="@style/LargeText"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_email_icon" />
+
+            <com.yin.driver.view.AppTextView_Title
+                android:id="@+id/activity_contact_us_email_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/service_btn_bg"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/email_us"
+                android:textAllCaps="false"
+                android:textAppearance="@style/LargeText"
+                android:textColor="@color/white"
+                android:textStyle="normal" />
+
+            <com.yin.driver.view.AppTextView_Title
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:paddingBottom="2dp"
+                android:singleLine="false"
+                android:text="@string/follow_us"
+                android:textAllCaps="false"
+                android:textAppearance="@style/LargeText"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="24dp">
+
+                <ImageView
+                    android:id="@+id/activity_contact_us_facebook_iv"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_facebook" />
+
+                <ImageView
+                    android:id="@+id/activity_contact_us_twitter_iv"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_twitter" />
+
+                <ImageView
+                    android:id="@+id/activity_contact_us_instagram_iv"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_instagram" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

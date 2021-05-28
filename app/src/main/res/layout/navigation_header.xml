@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/text_size_header"
+    android:background="@color/sends">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorAccent"
+        android:orientation="horizontal"
+        android:padding="@dimen/text_size_header"
+        android:paddingBottom="0dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/navigation_header_profile_round_view"
+            android:layout_width="@dimen/nav_header_profile_pic_width"
+            android:layout_height="@dimen/nav_header_profile_pic_width"
+            android:layout_gravity="center"
+            android:padding="@dimen/activity_gutter_margin_quarter"
+            android:src="@drawable/ic_profile" />
+
+        <LinearLayout
+            android:id="@+id/navigation_header_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:layout_marginLeft="@dimen/activity_gutter_margin_quarter"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_gutter_margin_half">
+
+            <com.yin.driver.view.AppTextView
+                android:id="@+id/navigation_header_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dolly Kiran"
+                android:textAppearance="@style/MediumSizeText"
+                android:textColor="@color/ColorPrimaryDark"
+                android:textStyle="bold" />
+
+            <com.yin.driver.view.AppTextView
+                android:id="@+id/navigation_header_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/navigation_header_name"
+                android:layout_marginTop="@dimen/activity_gutter_margin_quarter"
+                android:text="Riyadh"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/ColorPrimaryDark"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/navigation_header_close_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:paddingRight="-50dp"
+            android:src="@color/transparent" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:progressActivity="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/send">
+
+    <LinearLayout
+        android:id="@+id/main_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_gutter_margin_half"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/row_list_news_list_driver_iv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:gravity="left"
+                android:paddingTop="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_boys_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/activity_gutter_margin_quarter"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <com.yin.driver.view.AppTextView_SubTitle
+                    android:id="@+id/row_list_news_list_driver_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:paddingBottom="2dp"
+                    android:singleLine="false"
+                    android:text="@string/name"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/MediumText"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:paddingTop="2dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_whit_location" />
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/row_list_location_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:gravity="left"
+                        android:paddingBottom="2dp"
+                        android:singleLine="false"
+                        android:text="@string/location"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/SmallText"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.yin.driver.view.AppTextView_Title
+            android:id="@+id/row_list_customer_request_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_gutter_margin"
+            android:gravity="center"
+            android:paddingBottom="@dimen/activity_gutter_margin_half"
+            android:singleLine="false"
+            android:text="@string/customer_request_list"
+            android:textAllCaps="false"
+            android:textAppearance="@style/LargeText"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.vlonjatg.progressactivity.ProgressLinearLayout
+        android:id="@+id/details_progressActivity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_ll"
+        app:emptyTitleTextColor="@color/green_light"
+        app:errorContentTextColor="@color/app_fontColor"
+        app:errorTitleTextColor="@color/app_fontColor"
+        progressActivity:emptyBackgroundColor="@color/transparent"
+        progressActivity:errorBackgroundColor="@color/transparent"
+        progressActivity:loadingBackgroundColor="@color/transparent"
+        progressActivity:loadingProgressBarColor="@color/green_light">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_home_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_yang_bg" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </com.vlonjatg.progressactivity.ProgressLinearLayout>
+
+
+</RelativeLayout>

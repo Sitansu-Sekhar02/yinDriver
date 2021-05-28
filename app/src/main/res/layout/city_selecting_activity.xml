@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_common"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/tool_bar"
+        layout="@layout/tool_bar_detail"/>
+
+    <LinearLayout
+        android:id="@+id/ll_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:paddingTop="5dp">
+
+        <com.yin.driver.view.AppTextView_SubTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_gutter_margin"
+            android:layout_marginBottom="@dimen/activity_gutter_margin_double"
+            android:gravity="center"
+            android:text="@string/change_your_city"
+            android:textAppearance="@style/LargeText"
+            android:textColor="@color/ColorPrimaryDark" />
+
+        <LinearLayout
+            android:id="@+id/select_country_spinner_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_gutter_margin"
+            android:layout_marginRight="@dimen/activity_gutter_margin"
+            android:layout_marginBottom="@dimen/activity_gutter_margin_double"
+            android:background="@drawable/bg_white_field"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_gutter_margin_quarter">
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/select_country_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_spacing"
+                android:padding="2dp"
+                android:layout_marginLeft="@dimen/activity_gutter_margin"
+                android:layout_marginRight="@dimen/activity_gutter_margin"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="@style/SmallText"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select_city_spinner_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/activity_gutter_margin"
+            android:layout_marginRight="@dimen/activity_gutter_margin"
+            android:layout_marginBottom="@dimen/activity_gutter_margin_triple"
+            android:background="@drawable/bg_white_field"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_gutter_margin_quarter">
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/select_city_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spinner_spacing"
+                android:layout_marginLeft="@dimen/activity_gutter_margin"
+                android:layout_marginRight="@dimen/activity_gutter_margin"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="@style/SmallText"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_gutter_margin"
+            android:layout_marginRight="@dimen/activity_gutter_margin"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="@dimen/activity_gutter_margin_double"
+            android:orientation="horizontal">
+
+        <com.yin.driver.view.AppTextView_SubTitle
+            android:id="@+id/update_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/activity_gutter_margin_half"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/activity_gutter_margin_half"
+            android:text="@string/update"
+            android:textAppearance="@style/LargeText"
+            android:background="@drawable/bg_button_color_accent_border"
+            android:textColor="@color/ColorPrimaryDark" />
+
+        <com.yin.driver.view.AppTextView_SubTitle
+            android:id="@+id/cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/activity_gutter_margin_half"
+            android:text="@string/cancel"
+            android:textAppearance="@style/LargeText"
+            android:background="@drawable/bg_button_color_accent_border"
+            android:textColor="@color/ColorPrimaryDark" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

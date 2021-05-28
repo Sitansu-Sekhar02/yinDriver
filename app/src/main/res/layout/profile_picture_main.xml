@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.vlonjatg.progressactivity.ProgressConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profile_picture_progressActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/product_details_tool_bar"
+    progressActivity:loadingBackgroundColor="@color/app_light_gray"
+    progressActivity:emptyBackgroundColor="@color/app_light_gray"
+    progressActivity:errorBackgroundColor="@color/app_light_gray">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.CoordinatorLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/overview_coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/app_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                app:elevation="0dp"
+                android:background="@color/app_fontBlackColor"
+                android:theme="@style/AppTheme">
+                <include
+                    android:id="@+id/profile_picture_tool_bar"
+                    layout="@layout/tool_bar_detail"
+                    />
+            </android.support.design.widget.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/profile_picture_main_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_login_bg"/>
+                <ImageView
+                    android:id="@+id/profile_picture_main_editButton"
+                    android:background="@drawable/circle_app_accent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_edit_profile_picture_dark"
+                    android:layout_margin="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+    </com.vlonjatg.progressactivity.ProgressConstraintLayout>

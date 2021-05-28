@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_white_splash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/activity_gutter_margin_triples"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="@dimen/activity_gutter_margin_triple"
+                android:src="@drawable/ic_app" />
+
+            <com.yin.driver.view.AppNewTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/activity_gutter_margin"
+                android:text="@string/log_in_to_yin"
+                android:textAppearance="@style/LargeSizeText"
+                android:textColor="@color/quantum_black_100"
+                android:textColorHint="@color/quantum_black_100"
+                android:textSize="@dimen/activity_gutter_margin_double"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_gutter_margin_double"
+            android:layout_marginRight="@dimen/activity_gutter_margin_double"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/activity_gutter_margin">
+
+                <com.yin.driver.view.AppTextView_Title
+                    android:id="@+id/otp_screen_country_code_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/code"
+                    android:textAppearance="@style/MediumText"
+                    android:textColor="@color/quantum_black_100"
+                    android:textColorHint="@color/quantum_black_100"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/activity_gutter_margin_half"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/activity_gutter_margin">
+
+                <com.yin.driver.view.AppTextView_Title
+                    android:id="@+id/otp_mobileNo_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/mobile_number"
+                    android:textAppearance="@style/MediumText"
+                    android:textColor="@color/quantum_black_100"
+                    android:textColorHint="@color/quantum_black_100"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/activity_gutter_margin_half"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin"
+                    android:background="@color/grey" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.mukesh.OtpView
+            android:id="@+id/otp_screen_otp_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/activity_gutter_margin_quarter"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:focusedByDefault="false"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:textColor="@color/app_fontColor"
+            app:itemCount="@integer/otp_length"
+            app:itemHeight="@dimen/otp_box_height"
+            app:itemSpacing="12dp"
+            app:lineColor="@color/app_primary"
+            app:lineWidth="1dp"
+            app:viewType="rectangle" />
+
+        <com.yin.driver.view.AppTextView_Title
+            android:id="@+id/registration_activity_submit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_gutter_margin"
+            android:background="@drawable/splash_button_bg"
+            android:paddingTop="@dimen/activity_gutter_margin_half"
+            android:paddingBottom="@dimen/activity_gutter_margin_half"
+            android:text="@string/submit"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/activity_gutter_margin_triple"
+            android:layout_marginLeft="@dimen/activity_gutter_margin_triple"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/app_primary"
+            android:textColorHint="@color/app_primary"
+            android:textStyle="bold" />
+
+        <com.yin.driver.view.AppTextView_Title
+            android:id="@+id/registration_activity_resendActivation_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_gutter_margin"
+            android:background="@drawable/splash_button_bg"
+            android:paddingTop="@dimen/activity_gutter_margin_half"
+            android:paddingBottom="@dimen/activity_gutter_margin_half"
+            android:text="@string/recent_otp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/activity_gutter_margin_triple"
+            android:layout_marginLeft="@dimen/activity_gutter_margin_triple"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/app_primary"
+            android:textColorHint="@color/app_primary"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

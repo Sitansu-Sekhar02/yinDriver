@@ -1,0 +1,139 @@
+
+
+import com.google.gms.googleservices.GoogleServicesPlugin
+
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.yin.driver"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.1"
+        multiDexEnabled true
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+        mavenCentral()
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+}
+dependencies {
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:support-core-utils:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    implementation 'com.google.firebase:firebase-core:16.0.0'
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:16.0.0'
+    implementation 'com.google.firebase:firebase-storage:16.1.0'
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+
+    implementation 'com.google.android.gms:play-services-analytics:16.0.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.0'
+    implementation 'com.google.android.gms:play-services-gcm:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    /*AWS libraries*/
+    implementation 'com.amazonaws:aws-android-sdk-core:2.+'
+    implementation 'com.amazonaws:aws-android-sdk-cognito:2.+'
+    implementation 'com.amazonaws:aws-android-sdk-s3:2.+'
+    implementation 'com.amazonaws:aws-android-sdk-ddb:2.+'
+    implementation 'com.google.android.libraries.places:places:1.1.0'
+    implementation 'org.jsoup:jsoup:1.7.3'
+    implementation 'com.github.Innovattic:range-seek-bar:v1.0.1'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
+    implementation('com.facebook.android:facebook-android-sdk:4.7.0') {
+        exclude group: 'com.parse.bolts', module: 'bolts-tasks'
+    }
+    /*    implementation('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
+                        transitive = true;*/
+    implementation ('com.hbb20:ccp:2.0.0'){
+        exclude group: 'commons-io', module: 'commons-io'
+    }
+    implementation 'com.github.vlonjatg:progress-activity:2.0.5'
+    implementation 'at.blogc:expandabletextview:1.0.5'
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.0.3'
+    implementation('com.github.justzak:dilatingdotsprogressbar:1.0.1') {
+        exclude group: 'commons-io', module: 'commons-io'
+    }
+    implementation 'com.crystal:crystalrangeseekbar:1.1.3'
+    implementation('com.nineoldandroids:library:2.4.0') {
+        exclude module: 'commons-io'
+    }
+    implementation('com.daimajia.slider:library:1.1.5@aar') {
+        exclude module: 'commons-io'
+    }
+
+    implementation('org.lucasr.twowayview:twowayview:0.1.4') {
+        exclude group: 'commons-io', module: 'commons-io'
+    }
+    implementation 'com.edmodo:rangebar:1.0.0'
+    implementation 'com.ogaclejapan.smarttablayout:library:1.6.0@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.6.0@aar'
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+    implementation('com.facebook.fresco:fresco:1.9.0') {
+        exclude group: 'com.parse.bolts', module: 'bolts-tasks'
+    }
+    implementation('com.github.vlonjatg:progress-activity:v1.0.3') {
+        exclude group: 'commons-io', module: 'commons-io'
+    }
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation('com.twotoasters.jazzylistview:library:1.2.1') {
+        exclude module: 'commons-io'
+    }
+    implementation('com.etsy.android.grid:library:1.0.5') {
+        exclude module: 'commons-io'
+    }
+    implementation('org.lucasr.twowayview:twowayview:0.1.4') {
+        exclude module: 'commons-io'
+    }
+    implementation('com.davemorrissey.labs:subsampling-scale-image-view:3.4.1') {
+        exclude module: 'commons-io'
+    }
+    implementation('com.github.JakeWharton:ViewPagerIndicator:2.4.1@aar') {
+        exclude group: 'commons-io', module: 'commons-io'
+    }
+    implementation('com.leo.simplearcloader:simplearcloader:1.0.+') {
+        exclude group: 'commons-io', module: 'commons-io'
+    }
+    implementation('com.toptoche.searchablespinner:searchablespinnerlibrary:+') {
+        exclude group: 'commons-io', module: 'commons-io'
+    }
+    /*Multi DEX for more code*/
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    testImplementation 'org.testng:testng:6.9.6'
+    implementation 'com.android.support:swiperefreshlayout:28.0.0'
+}
+apply plugin: 'com.google.gms.google-services'
+
+GoogleServicesPlugin.config.disableVersionCheck = true

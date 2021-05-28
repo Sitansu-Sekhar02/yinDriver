@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/marker_view_incl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color_background"
+    tools:context=".map.SearchPlaceOnMapActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_confirm"
+        android:layout_below="@+id/ll"
+        android:layout_alignParentBottom="true">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.yin.driver.map.CustomMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/marker_icon_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_location" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/tool_bar"
+            layout="@layout/tool_bar_profile" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/confirm_button_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/row_list_news_list_driver_iv"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    android:paddingTop="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_boys_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical">
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/row_list_news_list_driver_name_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:paddingBottom="2dp"
+                        android:singleLine="true"
+                        android:text="@string/name"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="left"
+                            android:gravity="left"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_whit_location" />
+
+                        <com.yin.driver.view.AppTextView_SubTitle
+                            android:id="@+id/row_list_location_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="2dp"
+                            android:gravity="left"
+                            android:singleLine="true"
+                            android:text="@string/location"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/SmallerText"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_gutter_margin"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/row_list_news_list_user_iv"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_girl_icon" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <com.yin.driver.view.AppTextView_SubTitle
+                            android:id="@+id/row_list_news_list_user_namev"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:singleLine="false"
+                            android:text="@string/name"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/MediumText"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="horizontal">
+
+
+                            <com.yin.driver.view.AppTextView_SubTitle
+                                android:id="@+id/row_list_user_no_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/activity_gutter_margin_quarter"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:paddingBottom="2dp"
+                                android:singleLine="true"
+                                android:text="@string/no"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/SmallText"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <com.yin.driver.view.AppTextView_SubTitle
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@string/service_time"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/SmallerText"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <com.yin.driver.view.AppTextView_SubTitle
+                                android:id="@+id/row_list_user_time_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@string/service_time"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/SmallerText"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin_quarter"
+                    android:layout_marginRight="@dimen/activity_gutter_margin_quarter"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/row_list_news_list_theapist_iv"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="left"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:gravity="left"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_g" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <com.yin.driver.view.AppTextView_SubTitle
+                            android:id="@+id/row_list_news_list_therapists_name_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:text="@string/name"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/MediumText"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <com.yin.driver.view.AppTextView_SubTitle
+                                android:id="@+id/row_list_therapists_no_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@string/no"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/SmallText"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <com.yin.driver.view.AppTextView_SubTitle
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@string/service_time"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/SmallerText"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <com.yin.driver.view.AppTextView_SubTitle
+                                android:id="@+id/row_list_therapists_time_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="2dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:paddingBottom="2dp"
+                                android:singleLine="true"
+                                android:text="@string/service_time"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/SmallerText"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_gutter_margin"
+                android:layout_marginTop="@dimen/activity_gutter_margin_half"
+                android:layout_marginRight="@dimen/activity_gutter_margin"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/row_list_therapist_location_car_iv"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_white_therapist_loc" />
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/row_list_therapist_location_car_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingBottom="2dp"
+                        android:singleLine="true"
+                        android:text="@string/theripast"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/SmallerText"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/row_list_location_car_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/location"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/SmallerText"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/row_list_therapist_pickup_car_iv"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_white_theripast_pickup" />
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/row_list_therapist_pickup_car_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/theripast"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/SmallerText"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/row_list_pickup_car_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:paddingBottom="2dp"
+                        android:text="@string/pickup"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/SmallerText"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/row_list_customer_location_car_iv"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:paddingTop="2dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_white_customer_loc" />
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/row_list_customer_location_car_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:paddingBottom="2dp"
+                        android:text="@string/customer"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/SmallerText"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/row_list_locationss_car_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:paddingBottom="2dp"
+                        android:text="@string/location"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/SmallerText"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/googleplacesearch_icon_cv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_gutter_margin"
+        android:layout_marginTop="@dimen/activity_gutter_margin_double"
+        android:layout_marginRight="@dimen/activity_gutter_margin"
+        android:layout_marginBottom="8dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="false">
+
+        <AutoCompleteTextView
+            android:id="@+id/googleplacesearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_bar"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_back"
+            android:drawableRight="@drawable/com_facebook_close"
+            android:drawablePadding="7dp"
+            android:hint="Search for a location"
+            android:lines="3"
+            android:maxLines="5"
+            android:minLines="3"
+            android:padding="3dp"
+            android:textSize="14sp" />
+
+    </android.support.v7.widget.CardView>
+
+    <com.yin.driver.view.AppButton
+        android:id="@+id/bt_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_gutter_margin_double"
+        android:layout_marginRight="@dimen/activity_gutter_margin_double"
+        android:layout_marginBottom="@dimen/activity_gutter_margin"
+        android:background="@color/sends"
+        android:gravity="center"
+        android:text="@string/start_ride"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="normal" />
+</RelativeLayout>

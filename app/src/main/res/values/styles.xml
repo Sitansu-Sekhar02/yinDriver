@@ -1,0 +1,102 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorAccent</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="colorAccent">@color/ColorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:actionButtonStyle">@style/ActionButtonStyle</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!--    Navigation style...-->
+    <style name="NavigationDrawerStyle">
+        <!-- <item name="android:textSize">@style/MediumText</item>--><!-- text size in menu-->
+        <item name="android:typeface">normal</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size_medium</item>
+    </style>
+
+    <style name="MediumText" parent="MediumSizeText">
+        <item name="android:textColor">@color/app_fontColor</item>
+    </style>
+
+
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
+
+    <style name="ActionButtonStyle" parent="@android:style/Widget.Holo.Light.ActionButton">
+        <item name="android:minWidth">0dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>
+
+    <style name="spinner_style">
+        <!-- <item name="android:background">@drawable/spinner_bg</item>-->
+
+        <item name="android:textColor">@color/app_primary</item>
+
+    </style>
+
+    <style name="LargeText" parent="LargeSizeText">
+        <item name="android:textColor">@color/app_fontColor</item>
+    </style>
+
+    <style name="SmallerText" parent="SmallerSizeText">
+        <item name="android:textColor">@color/app_fontColor</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/app_fontColor_hint</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+        <item name="android:textColor">@color/ColorPrimary</item>
+        <item name="android:textColorPrimary">@color/ColorPrimary</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/ColorAccent</item>
+        <item name="colorControlNormal">@color/ColorPrimary</item>
+        <item name="colorControlActivated">@color/ColorPrimary</item>
+        <item name="colorControlHighlight">@color/ColorPrimary</item>
+        <item name="backgroundTint">@color/app_fontColor_hint</item>
+
+    </style>
+
+    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/quantum_black_100</item>
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <style name="SmallText" parent="SmallSizeText">
+        <item name="android:textColor">@color/app_fontColor</item>
+    </style>
+
+    <style name="MediumSizeText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="LargeSizeText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">@dimen/font_size_large</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="SmallSizeText" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">@dimen/font_size_small</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="SmallerSizeText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">@dimen/font_size_smaller</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+
+</resources>

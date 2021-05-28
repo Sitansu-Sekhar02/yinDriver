@@ -1,0 +1,153 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/records_item_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/massage_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:src="@color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/category_icon_iv"
+                    android:layout_width="@dimen/category_icon_size"
+                    android:layout_height="@dimen/category_icon_size"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/activity_gutter_margin_quarter"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                    android:src="@drawable/ic_massage" />
+
+                <com.yin.driver.view.AppTextView_SubTitle
+                    android:id="@+id/category_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/activity_gutter_margin_quarter"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin_quarter"
+                    android:gravity="left"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:text="Massage"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/LargeText"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/records_item_ll_reverse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hair_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/category_icon_reverse_iv"
+                    android:layout_width="@dimen/category_icon_size"
+                    android:layout_height="@dimen/category_icon_size"
+                    android:layout_gravity="left|center"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin_double"
+                    android:src="@drawable/ic_hair" />
+
+                <com.yin.driver.view.AppTextView_SubTitle
+                    android:id="@+id/category_name_reverse_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/activity_gutter_margin_half"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                    android:gravity="left"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:text="Hair"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/LargeText"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:src="@color/transparent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/records_expanded_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorPrimary"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/records_files_list_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.yin.driver.view.AppTextView_SubTitle
+            android:id="@+id/empty_services_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="textMultiLine"
+            android:background="@drawable/bg_select_services_dropdown_gradient"
+            android:padding="@dimen/activity_gutter_margin_half"
+            android:singleLine="true"
+            android:text="Hair"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

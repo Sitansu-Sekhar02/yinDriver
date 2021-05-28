@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "1016529031472",
+    "firebase_url": "https://yin-driver.firebaseio.com",
+    "project_id": "yin-driver",
+    "storage_bucket": "yin-driver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016529031472:android:35d3c61581125d8c9978f5",
+        "android_client_info": {
+          "package_name": "com.yin.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016529031472-9m5ls89rmom6gr3cn08e9f9544iqkevc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yin.driver",
+            "certificate_hash": "a7ecd9b5f9153324dd595ee06905a174aec514ae"
+          }
+        },
+        {
+          "client_id": "1016529031472-trk5v3fkuu3g33lssuhq96d5ngrn235r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yin.driver",
+            "certificate_hash": "4b3ce6ff48f0f9861d867f51d41cb17e4fbd791a"
+          }
+        },
+        {
+          "client_id": "1016529031472-0am672be8r087aivfb8l7p0jo8otv1dt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6Tt_odhZiVWuDJRziAGCzpWpstN6HRec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016529031472-0am672be8r087aivfb8l7p0jo8otv1dt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1016529031472-neuv42v2p30pi2p9k0u0lp7rp0tc6pue.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.driver.yindriver"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_login_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_otp_logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/thank_you"
+            android:textAllCaps="true"
+            android:textAppearance="@style/LargeText"
+            android:textColor="@color/ColorAccent"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <com.yin.driver.view.AppTextView_Title
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/for_registering"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/ColorAccent"
+            android:textStyle="bold" />
+
+        <com.yin.driver.view.AppTextView_Title
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/one_of_our_experts_will_come"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/ColorAccent"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.yin.driver.view.AppTextView_Title
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/visit_you"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/ColorAccent"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.yin.driver.view.AppButton
+            android:id="@+id/ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:background="@drawable/ic_login_button_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/ok"
+            android:textAllCaps="true"
+            android:textColor="@color/app_fontColor_dark" />
+    </LinearLayout>
+
+</RelativeLayout>

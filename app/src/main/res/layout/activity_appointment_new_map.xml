@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/coss_iv"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/activity_gutter_margin"
+        android:layout_marginRight="@dimen/activity_gutter_margin"
+        android:layout_marginBottom="@dimen/activity_gutter_margin"
+        android:src="@drawable/ic_blue_cross" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/coss_iv"
+        android:layout_weight="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/activity_gutter_margin"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:paddingBottom="@dimen/activity_gutter_margin"
+                android:src="@drawable/ic_default_user" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                android:orientation="vertical">
+
+                <com.yin.driver.view.AppTextView_SubTitle
+                    android:id="@+id/name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/name"
+                    android:textAppearance="@style/MediumSizeText"
+                    android:textColor="@color/quantum_black_100"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/customer_id"
+                        android:textAppearance="@style/MediumSizeText"
+                        android:textColor="@color/quantum_black_100"
+                        android:textStyle="bold" />
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/customer_id_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="@string/customer_id"
+                        android:textAppearance="@style/MediumSizeText"
+                        android:textColor="@color/quantum_black_100"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_massage" />
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/location_name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                        android:maxLines="3"
+                        android:text="@string/customer_id"
+                        android:textAppearance="@style/SmallText"
+                        android:textColor="@color/quantum_black_100"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_gutter_margin"
+                android:layout_marginRight="@dimen/activity_gutter_margin">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.yin.driver.map.CustomMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main_ll"
+    android:background="@color/transparent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_gutter_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_gutter_margin"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/row_list_therapists_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="left"
+                    android:paddingTop="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_girl_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_gutter_margin_quarter"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical">
+
+                    <com.yin.driver.view.AppTextView_SubTitle
+                        android:id="@+id/row_list_news_list_therapists_name_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:paddingBottom="2dp"
+                        android:singleLine="false"
+                        android:text="@string/name"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="3"
+                        android:orientation="horizontal">
+
+                        <com.yin.driver.view.AppTextView
+                            android:id="@+id/row_list_therapists_dno_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                            android:layout_weight="1.4"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:paddingBottom="2dp"
+                            android:singleLine="false"
+                            android:text="@string/no"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/SmallText"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <com.yin.driver.view.AppTextView
+                            android:id="@+id/row_list_view_details_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                            android:layout_marginRight="@dimen/activity_gutter_margin_half"
+                            android:layout_weight="1.6"
+                            android:paddingTop="@dimen/activity_gutter_margin_quarter"
+                            android:paddingBottom="@dimen/activity_gutter_margin_quarter"
+                            android:background="@drawable/button_bg_color_white"
+                            android:gravity="center"
+                            android:singleLine="false"
+                            android:text="@string/view_details"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/SmallText"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.yin.driver.view.AppTextView
+                            android:id="@+id/row_list_locationss_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                            android:gravity="left"
+                            android:singleLine="false"
+                            android:text="@string/service_time"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/SmallText"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <com.yin.driver.view.AppTextView
+                            android:id="@+id/row_list_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/activity_gutter_margin_half"
+                            android:singleLine="false"
+                            android:text="@string/time"
+                            android:textAllCaps="false"
+                            android:textAppearance="@style/SmallText"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/activity_gutter_margin_quarter"
+            android:layout_marginTop="@dimen/activity_gutter_margin_half"
+            android:layout_marginRight="@dimen/activity_gutter_margin_quarter"
+            android:background="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>

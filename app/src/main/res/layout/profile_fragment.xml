@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/progressBarLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:progressTint="@color/ColorAccent" />
+
+            <com.yin.driver.view.AppTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/logingin"
+                android:textAppearance="@style/LargeText"
+                android:textColor="@color/ColorAccent"
+                android:textSize="@dimen/heading_normal_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/detailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/profile_image_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_gradient"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_fragment_profile_image"
+                    android:layout_width="@dimen/profile_pic_width"
+                    android:layout_height="@dimen/profile_pic_width"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_gutter_margin"
+                    android:padding="@dimen/activity_gutter_margin_quarter"
+                    android:src="@drawable/ic_boys_icon"
+                    android:visibility="visible"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+                <com.yin.driver.view.AppTextView_Title
+                    android:id="@+id/name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_gutter_margin_half"
+                    android:gravity="center"
+                    android:textAppearance="@style/LargeText"
+                    android:textStyle="bold"
+                    android:textColor="@color/white" />
+
+                <com.yin.driver.view.AppTextView_Title
+                    android:id="@+id/email_ev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/activity_gutter_margin"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/MediumText"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_common"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_gutter_margin"
+                    android:hint="@string/firstName"
+                    android:padding="10dp"
+                    android:textColorHint="@color/white"
+                    android:visibility="visible"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.yin.driver.view.AppEditTextView
+                        android:id="@+id/first_name_etv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/white"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:singleLine="true"
+                        android:text="@string/name"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textStyle="normal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lastName"
+                    android:padding="10dp"
+                    android:textColorHint="@color/white"
+                    android:visibility="visible"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.yin.driver.view.AppEditTextView
+                        android:id="@+id/last_name_etv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/white"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:singleLine="true"
+                        android:text="@string/name"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textStyle="normal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/mobile"
+                    android:padding="10dp"
+                    android:textColorHint="@color/white"
+                    android:visibility="visible"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.yin.driver.view.AppEditTextView
+                        android:id="@+id/mobile_etv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/white"
+                        android:inputType="number"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:singleLine="true"
+                        android:text="+966558929138"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textStyle="normal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:padding="10dp"
+                    android:textColorHint="@color/white"
+                    android:visibility="visible"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.yin.driver.view.AppEditTextView
+                        android:id="@+id/email_etv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textEmailAddress"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:maxLines="1"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:singleLine="true"
+                        android:text="loremipsum@gmail.com"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textStyle="normal" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
